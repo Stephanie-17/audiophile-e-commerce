@@ -6,7 +6,7 @@
 A pixel-perfect, responsive e-commerce website for high-end audio equipment, built with Next.js, TypeScript, and Convex.
 
 ## 🚀 Live Demo
-[Deployed on Vercel]() <!-- Add your live URL here -->
+[Deployed on Vercel](https://audiophile-e-commerce-lovat.vercel.app/) 
 
 
 
@@ -43,17 +43,23 @@ A pixel-perfect, responsive e-commerce website for high-end audio equipment, bui
 
 ## 🏗 Project Structure
 
-```
+
 audiophile/
 ├── app/                    # Next.js App Router
 │   ├── category/          # Dynamic category pages
+│   │   └── [category]/    
 │   ├── product/           # Dynamic product pages  
+│   │   └── [slug]/
 │   ├── checkout/          # Checkout flow
-│   └── order-confirmation/# Order success page
+│   ├── order-confirmation/ # Order success page
+│   └── context/           # React Context for state
 ├── components/            # Reusable UI components
-├── context/               # React Context for state
 ├── convex/               # Backend schema & mutations
-```
+│   ├── schema.ts
+│   ├── orders.ts
+│   └── _generated/
+└── public/              # Static assets
+
 
 ## 🚀 Getting Started
 
