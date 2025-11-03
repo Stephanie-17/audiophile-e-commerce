@@ -142,7 +142,7 @@ export default function ProductPage({ params }: ProductPageProps) {
 						</p>
 					</div>
 
-					<div>
+					<div className="flex max-md:flex-col md:flex-row md:items-start lg:flex-col md:max-lg:gap-[170px]  md:max-lg:w-[549px] ">
 						<h2 className="font-bold text-[24px] sm:text-[32px] uppercase mb-6">
 							In The Box
 						</h2>
