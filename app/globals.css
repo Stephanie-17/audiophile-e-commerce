@@ -40,7 +40,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 2;
-  pointer-events: none; /* Prevents it from blocking clicks */
+  pointer-events: none; 
 }
 .zx7-container{
   background-image: url('/assets/home/mobile/image-speaker-zx7.jpg');

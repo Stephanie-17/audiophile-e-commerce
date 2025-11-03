@@ -3,7 +3,6 @@ import ProductCategories from "./components/ProductCategories";
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function Home() {
 	return (
 		<div className="">
@@ -21,12 +20,11 @@ export default function Home() {
 								Experience natural, lifelike audio and exceptional build quality
 								made for the passionate music enthusiast.
 							</p>
-							<Link href={'/headphones/xx99-mark-two-headphones'}>
-							  <button className="w-40 cursor-pointer h-12 bg-[#D87D4A] hover:bg-[#FBAF85] transition-colors font-bold text-[13px] tracking-[1px]">
-								SEE PRODUCT
-							</button>
+							<Link href={"/headphones/xx99-mark-two-headphones"}>
+								<button className="w-40 cursor-pointer h-12 bg-[#D87D4A] hover:bg-[#FBAF85] transition-colors font-bold text-[13px] tracking-[1px]">
+									SEE PRODUCT
+								</button>
 							</Link>
-							
 						</div>
 					</div>
 				</section>
@@ -59,12 +57,11 @@ export default function Home() {
 							Upgrade to premium speakers that are phenomenally built to deliver
 							truly remarkable sound.
 						</p>
-						<Link href={'/speakers/zx9-speaker'}>
-						  	<button className="bg-black w-40 md:mt-10 lg:mt-0 h-12 text-[13px] cursor-pointer font-bold tracking-[1px] hover:bg-[#4C4C4C] transition-colors">
-							SEE PRODUCT
-						</button>
+						<Link href={"/speakers/zx9-speaker"}>
+							<button className="bg-black w-40 md:mt-10 lg:mt-0 h-12 text-[13px] cursor-pointer font-bold tracking-[1px] hover:bg-[#4C4C4C] transition-colors">
+								SEE PRODUCT
+							</button>
 						</Link>
-					
 					</div>
 				</section>
 
@@ -72,12 +69,11 @@ export default function Home() {
 					<h4 className="text-[28px] font-bold text-black tracking-[2px]">
 						ZX7 SPEAKER
 					</h4>
-						<Link href={'/speakers/zx7-speaker'}>
-						  <button className="w-40 h-12 border-2 border-black text-black text-[13px] font-bold tracking-[1px] hover:bg-black hover:text-white transition-colors ">
-						 SEE PRODUCT
-					   </button>
-						</Link>
-					
+					<Link href={"/speakers/zx7-speaker"}>
+						<button className="w-40 h-12 border-2 border-black text-black text-[13px] font-bold tracking-[1px] hover:bg-black hover:text-white transition-colors ">
+							SEE PRODUCT
+						</button>
+					</Link>
 				</section>
 
 				<section className="max-sm:w-[327px] sm:max-md:w-[90%] md:max-lg:w-[689px] h-[424px] sm:max-md:h-[220px] lg:max-[1199px]:w-full min-[1200px]:max-[1439px]:w-[1110px] min-[1440px]:max-w-[1440px] md:h-80 mt-6 flex flex-col sm:flex-row items-center sm:items-start mx-auto  gap-6 min-[1200px]:gap-[30px]">
@@ -104,12 +100,11 @@ export default function Home() {
 						<h4 className="text-[28px] font-bold text-black tracking-[2px]">
 							YX1 EARPHONES
 						</h4>
-						<Link href={'/earphones/yx1-earphones'}>
-						   <button className="w-40 h-12 border-2 border-black text-black text-[13px] font-bold tracking-[1px] hover:bg-black hover:text-white transition-colors ">
-							SEE PRODUCT
-						</button>
+						<Link href={"/earphones/yx1-earphones"}>
+							<button className="w-40 h-12 border-2 border-black text-black text-[13px] font-bold tracking-[1px] hover:bg-black hover:text-white transition-colors ">
+								SEE PRODUCT
+							</button>
 						</Link>
-						
 					</div>
 				</section>
 				<About />
