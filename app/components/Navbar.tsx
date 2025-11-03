@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import ProductCategories from "./ProductCategories";
 import Cart from "./Cart";
 import { useCart } from "../context/CartContext";
@@ -13,6 +13,19 @@ const Navbar = () => {
 	const [openCart, setOpenCart] = useState(false);
 	const { getTotalItems } = useCart();
 	const cartItemCount = getTotalItems();
+
+	useEffect(() => {
+  if (openMenu) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+  
+  return () => {
+    document.body.style.overflow = 'unset';
+  };
+}, [openMenu]);
+
 
 	return (
 		<>
@@ -97,15 +110,15 @@ const Navbar = () => {
 						className="fixed inset-0 bg-black/40 z-40 lg:hidden"
 						onClick={() => setOpenMenu(false)}
 					/>
-					<div className="fixed top-[90px] left-0 w-full bg-white z-50 lg:hidden rounded-b-lg">
+					<div className="fixed top-[90px] max-h-[calc(100vh-90px)] overflow-y-auto left-0 w-full bg-white z-50 lg:hidden rounded-b-lg">
 						<div className="px-6 py-8">
-							<ProductCategories />
+							<ProductCategories onCategorySelect={() => setOpenMenu(false)} />
 						</div>
 					</div>
 				</>
 			)}
 
-			{openCart && <Cart setOpenModal={setOpenCart} />}
+			{openCart && <Cart setOpenModal={setOpenCart}  />}
 		</>
 	);
 };

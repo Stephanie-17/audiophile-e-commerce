@@ -1,8 +1,19 @@
+'use client'
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter  } from "next/navigation";
+interface ProductCategoriesProps {
+  onCategorySelect?: () => void;
+}
 
-const ProductCategories = () => {
+const ProductCategories = ({onCategorySelect}:ProductCategoriesProps) => {
+	 const router = useRouter()
+	 const handleCategoryClick = (link:string) => {
+    if (onCategorySelect) {
+      onCategorySelect();
+    }
+		router.push(`/${link}`)
+	}
 	const categories = [
 		{
 			id: 1,
@@ -38,8 +49,8 @@ const ProductCategories = () => {
 						<h6 className="text-black font-bold text-[15px] tracking-[1.07px] mb-[17px] uppercase">
 							{category.categoryName}
 						</h6>
-						<Link href={`/${category.categoryName}`}>
-							<button className="hover:text-[#D87D4A] cursor-pointer transition-colors text-black/50 font-bold text-[13px] tracking-[1px] flex items-center gap-[13px] mb-[22px]">
+						
+							<button onClick={()=>handleCategoryClick(category.categoryName)} className="hover:text-[#D87D4A] cursor-pointer transition-colors text-black/50 font-bold text-[13px] tracking-[1px] flex items-center gap-[13px] mb-[22px]">
 								SHOP
 								<Image
 									src={"/assets/shared/desktop/icon-arrow-right.svg"}
@@ -48,7 +59,7 @@ const ProductCategories = () => {
 									height={12}
 								/>
 							</button>
-						</Link>
+						
 					</div>
 				</div>
 			))}
