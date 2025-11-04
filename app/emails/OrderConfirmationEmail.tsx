@@ -74,15 +74,6 @@ export const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
 					<Text style={sectionTitleStyle}>Order Items</Text>
 					{items.map((item, index) => (
 						<Row key={index} style={itemRow}>
-							<Column width={64}>
-								<Img
-									src={item.image}
-									alt={item.name}
-									width={64}
-									height={64}
-									style={itemImage}
-								/>
-							</Column>
 							<Column style={itemDetails}>
 								<Text style={itemNameStyle}>{item.name}</Text>
 								<Text style={itemPriceStyle}>
@@ -151,8 +142,8 @@ export const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
 				</Section>
 
 				<Section style={centerAlign}>
-					<Link href="https://yourwebsite.com/orders" style={buttonStyle}>
-						Track Your Order
+					<Link href="https://audiophile-e-commerce-lovat.vercel.app/" style={buttonStyle}>
+						Shop more!
 					</Link>
 				</Section>
 
@@ -167,7 +158,7 @@ export const OrderConfirmationEmail: React.FC<OrderConfirmationEmailProps> = ({
 						</Link>
 					</Text>
 					<Text style={copyrightStyle}>
-						© 2024 Audiophile. All rights reserved.
+						© 2025 Audiophile. All rights reserved.
 					</Text>
 				</Section>
 			</Container>
