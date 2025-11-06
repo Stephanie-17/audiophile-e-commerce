@@ -7,7 +7,6 @@ import {
 	Section,
 	Text,
 	Link,
-	Img,
 	Row,
 	Column,
 } from "@react-email/components";
@@ -217,10 +216,6 @@ const itemRow = {
 	borderRadius: "8px",
 };
 
-const itemImage = {
-	borderRadius: "4px",
-	objectFit: "cover" as const,
-};
 
 const itemDetails = {
 	paddingLeft: "15px",
